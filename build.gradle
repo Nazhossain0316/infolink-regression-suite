@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.crown'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
+    implementation 'org.testng:testng:7.1.0'
+    implementation 'junit:junit:4.13.1'
+}
+
+test {
+}
+
+tasks.withType(Test){
+    systemProperty 'env', System.getProperty('env', 'env')
+}
