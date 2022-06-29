@@ -51,6 +51,14 @@ public class SupportAdminTests extends TestBase {
         supportAdminPage.selectTruckYear("2016");
         supportAdminPage.selectCustomerByIndex(0);
 
+        supportAdminPage.selectLocationByIndex(0);
+
+        supportAdminPage.enterInServiceWeight("2000");
+        supportAdminPage.enterInCapacityWeight("1000");
+
+        supportAdminPage.fillInPmIntervalHrs("8");
+        supportAdminPage.fillInIntervalDays("5");
+        supportAdminPage.clickOnNextButton();
 
     }
 

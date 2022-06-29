@@ -46,7 +46,6 @@ public class SupportAdminPage {
         WebElement inputField = driver.findElement(By.cssSelector("lkd-single-select[formcontrolname='equipmentModel'] input"));
         inputField.sendKeys(truckName);
         inputField.sendKeys(Keys.RETURN);
-
     }
 
     public void selectTruckYear(String year) {
@@ -66,5 +65,49 @@ public class SupportAdminPage {
         WebElement inputField = driver.findElement(By.cssSelector("lkd-single-select[formcontrolname='customer'] input"));
         inputField.sendKeys(customerName);
         inputField.sendKeys(Keys.RETURN);
+    }
+
+    public void selectLocationByIndex(int index) {
+        WebElement dropDown = driver.findElement(By.cssSelector("lkd-single-select[formcontrolname='location'] div[class='ng-select-container'"));
+        dropDown.click();
+
+        List<WebElement> options = driver.findElements(By.cssSelector("ng-dropdown-panel div[role='option']"));
+        String locationName = options.get(index).getText();
+
+        WebElement inputField = driver.findElement(By.cssSelector("lkd-single-select[formcontrolname='location'] input"));
+        inputField.sendKeys(locationName);
+        inputField.sendKeys(Keys.RETURN);
+
+    }
+
+    public void enterInServiceWeight(String weight) {
+        //target the webelement
+        WebElement serviceWeightInputField = driver.findElement(By.cssSelector("input[formcontrolname='serviceWeight']"));
+
+        //do operation on webelement
+        serviceWeightInputField.sendKeys(weight);
+    }
+
+    public void enterInCapacityWeight(String capactiy) {
+        //target the webelement
+        WebElement serviceCapacityInputField = driver.findElement(By.cssSelector("input[formcontrolname='capacityWeight']"));
+
+        //do operation on webelement
+        serviceCapacityInputField.sendKeys(capactiy);
+    }
+
+    public void fillInPmIntervalHrs(String numberOfHrs) {
+        WebElement pmINputField = driver.findElement(By.cssSelector("input#intervalHourMeterInHours"));
+        pmINputField.sendKeys(numberOfHrs);
+    }
+
+    public void fillInIntervalDays(String days) {
+        WebElement intervalDaysInputField = driver.findElement(By.cssSelector("input#intervalDays"));
+        intervalDaysInputField.sendKeys(days);
+    }
+
+    public void clickOnNextButton() {
+        WebElement nextBtn = driver.findElement(By.cssSelector("button#wizard-next-button"));
+        nextBtn.click();
     }
 }
