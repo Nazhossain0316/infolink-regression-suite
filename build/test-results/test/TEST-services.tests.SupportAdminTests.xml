@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="services.tests.SupportAdminTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-29T18:33:27" hostname="HSNKFB3" time="18.194">
+<testsuite name="services.tests.SupportAdminTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-30T18:15:14" hostname="C229306" time="25.254">
   <properties/>
-  <testcase name="addNewTruckTest" classname="services.tests.SupportAdminTests" time="18.194"/>
+  <testcase name="addNewTruckTest" classname="services.tests.SupportAdminTests" time="25.254"/>
   <system-out><![CDATA[Property class loaded
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 6218
+  <system-err><![CDATA[Starting ChromeDriver 103.0.5060.53 (a1711811edd74ff1cf2150f36ffa3b0dae40b17f-refs/branch-heads/5060@{#853}) on port 60786
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.

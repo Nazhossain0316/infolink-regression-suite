@@ -59,7 +59,14 @@ public class SupportAdminTests extends TestBase {
         supportAdminPage.fillInPmIntervalHrs("8");
         supportAdminPage.fillInIntervalDays("5");
         supportAdminPage.clickOnNextButton();
-
+        supportAdminPage.chooseHighImpact();
+        supportAdminPage.fillInFrontToBackHigh("6");
+        supportAdminPage.fillInSideToSideHigh("4");
+        supportAdminPage.fillInImpulseThreshold("3");
+        supportAdminPage.fillInFrontToBackHighInMast("3");
+        supportAdminPage.fillInSideToSideHighInMast("5");
+        supportAdminPage.clickOnNextButton();
+        supportAdminPage.clickOnSaveButton();
     }
 
 

@@ -110,4 +110,39 @@ public class SupportAdminPage {
         WebElement nextBtn = driver.findElement(By.cssSelector("button#wizard-next-button"));
         nextBtn.click();
     }
+
+    public void chooseHighImpact() {
+        WebElement highImpactChkbox= driver.findElement(By.cssSelector("input#auxHighImpact"));
+        highImpactChkbox.click();
+    }
+
+    public void fillInFrontToBackHigh(String value) {
+        WebElement frontToBackHighInputField = driver.findElement(By.cssSelector("input#powerUnitFBHighX"));
+        frontToBackHighInputField.sendKeys(value);
+    }
+
+    public void fillInSideToSideHigh(String value) {
+        WebElement sideToSideHighInputField= driver.findElement(By.cssSelector("input#powerUnitSSHighY"));
+        sideToSideHighInputField.sendKeys(value);
+    }
+
+    public void fillInImpulseThreshold(String value) {
+        WebElement impulseThresholdInputField= driver.findElement(By.cssSelector("input#powerUnitImpulseLimit"));
+        impulseThresholdInputField.sendKeys(value);
+    }
+
+    public void fillInFrontToBackHighInMast(String value) {
+        WebElement frontToBackHighInMastInputField = driver.findElement(By.cssSelector("input#mastUnitFBHighX"));
+        frontToBackHighInMastInputField.sendKeys(value);
+    }
+
+    public void fillInSideToSideHighInMast(String value) {
+        WebElement sideToSideHighInMastInputField= driver.findElement(By.cssSelector("input#mastUnitSSHighY"));
+        sideToSideHighInMastInputField.sendKeys(value);
+    }
+
+    public void clickOnSaveButton() {
+        WebElement saveBtn = driver.findElement(By.cssSelector("button#wizard-save-button"));
+        saveBtn.click();
+    }
 }
